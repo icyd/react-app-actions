@@ -1,0 +1,21 @@
+name: Open Github issue
+author: Alberto Vázquez
+dscription: Opens a github issue
+inputs:
+  token:
+    description: Authentication token
+    required: true
+  title:
+    description: Issue title
+    required: true
+  body:
+    description: Issue body
+  assignees:
+    description: List of assignees
+outputs:
+  issue:
+    description: The issue object as json string
+runs:
+  using: node12
+  main: dist/index.js
+
