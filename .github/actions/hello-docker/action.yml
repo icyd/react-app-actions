@@ -1,0 +1,17 @@
+name: Hello World
+author: Alberto Vázquez
+dscription: Hello world action
+inputs:
+  who-to-greet:
+    description: Who to great
+    required: true
+    default: Beto
+outputs:
+  time:
+    description: Time of run
+runs:
+  using: node12
+  main: dist/index.js
+  args:
+    - ${{ inputs.who-to-greet }}
+
