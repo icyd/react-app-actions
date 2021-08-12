@@ -1,6 +1,6 @@
 name: Hello World
 author: Alberto Vázquez
-dscription: Hello world action
+dscription: Hello world action inside docker
 inputs:
   who-to-greet:
     description: Who to great
@@ -10,8 +10,7 @@ outputs:
   time:
     description: Time of run
 runs:
-  using: node12
-  main: dist/index.js
-  args:
-    - ${{ inputs.who-to-greet }}
+  using: docker
+  image: Dockerfile
+  args: ${{ inputs.who-to-greet }}
 
