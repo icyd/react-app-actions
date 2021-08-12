@@ -30,7 +30,7 @@ jobs:
       - run: |
           echo "Time: ${{ steps.issue.outputs.issue }}"
       - name: Send slack message
-      - uses: ./.github/actions/slack
+        uses: ./.github/actions/slack
         with:
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
           message: Hello Slack
